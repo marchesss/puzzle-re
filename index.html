@@ -3,54 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>400 дней любви ❤️</title>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #ffe6e6;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .heart {
-    position: relative;
-    width: 400px;
-    height: 400px;
-  }
-
-  .heart:before,
-  .heart:after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 320px;
-    background: #ff3366;
-    border-radius: 100px 100px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-    top: 0;
-    left: 100px;
-  }
-
-  .heart:after {
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-    left: 0;
-  }
-
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center;
-    font-size: 24px;
-    color: white;
-    line-height: 1.4;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -58,41 +11,6 @@
   <div class="text" id="loveText"></div>
 </div>
 
-<script>
-const loveMessages = [
-  "Я тебя люблю",       // русский
-  "I love you",         // английский
-  "Te amo",             // испанский
-  "Je t'aime",          // французский
-  "Ich liebe dich",     // немецкий
-  "Ti amo",             // итальянский
-  "Eu te amo",          // португальский
-  "愛してる",            // японский
-  "사랑해",              // корейский
-  "أنا أحبك",           // арабский
-  "Te iubesc",          // румынский
-  "Я тебе кохаю",       // украинский
-  "Jag älskar dig",     // шведский
-  "Я тебe люблю"        // белорусский
-];
-
-const textDiv = document.getElementById("loveText");
-let count = 0;
-let total = 400;
-
-function showLove() {
-  if (count < total) {
-    const message = loveMessages[count % loveMessages.length];
-    textDiv.textContent = message + " ❤️";
-    count++;
-    setTimeout(showLove, 150); // меняем сообщение каждые 150 мс
-  } else {
-    textDiv.textContent = "400 дней вместе! ❤️";
-  }
-}
-
-showLove();
-</script>
-
+<script src="game.js"></script>
 </body>
 </html>
